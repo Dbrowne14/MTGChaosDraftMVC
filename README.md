@@ -1,3 +1,1 @@
 # MTGChaosDraftMVC
-# MTGChaosDraftMVC
-# MTGChaosDraftMVC
