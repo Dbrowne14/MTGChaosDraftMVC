@@ -1,0 +1,298 @@
+/* global styles */
+
+* {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0 10rem 0 10rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color:gray;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+.text-hero-banner {
+    margin-top: 8rem;
+}
+
+.text-hero-banner  p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#draft-sim, #player-entry-box, #matchups {
+    margin-top: 6rem;
+}
+
+.form-group, .player-8 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* navigation bar */
+
+nav {
+    width: 100%;
+    height: 4rem;
+    margin: 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 2rem 1rem 0rem 0rem;
+    font-family: 'Savate',sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    padding-left: 1.5rem;
+}
+
+#nav ul li a{
+    color: rgba(3, 3, 9, 0.911);
+    text-decoration: none;
+    font-family: "Montserrat Alternates";
+}
+
+#nav ul li a:hover {
+    color:darkgoldenrod;
+    text-decoration: underline;
+}
+
+
+
+/*home-page specific*/
+/*hero-banner*/
+
+#hero-banner {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero-text {
+    width: 50%
+}
+
+#hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*rules*/
+
+#rules {
+    margin-top: 10rem;
+}
+
+#rules-buckets {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    column-gap: 10%;
+}
+
+#rules-title {
+    width: 50%;
+}
+
+#rules-title p {
+    font-size: 1.1rem;
+}
+
+.numbered-rules {
+    width: 45%;
+    line-height: 1.8rem;
+}
+
+.numbered-rules li {
+    width: 100%;
+    list-style-type: circle;
+}
+
+.numbered-rules li::marker, .number {
+    color: darkgoldenrod;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6rem;
+    padding: 2rem 2rem;
+    /*border: 0.2rem double darkgoldenrod; - commented out not sure*/ 
+}
+
+/*draft page*/
+
+/* draft block sim */
+
+#results-table {
+    text-align: left;
+    margin: 4rem 0;
+    line-height: 2rem;
+}
+
+#ixalan-table, #phyrexian-table, #innistrad-table, #ravnica-table, #tarkir-table {
+    display: none;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+.price, .year {
+    text-align: center;
+}
+
+.sets {
+    background-color: rgb(231, 189, 84);
+    font-style: italic;
+    font-weight: bold;
+}
+
+th {
+    border-bottom: gray .5px solid;
+}
+
+/* score counter page*/
+/*general*/
+
+.score-page-titles {
+    margin-bottom: 2rem;
+}
+
+#player-entry-box {
+    border-top: 0.5px solid lightgray;
+}
+
+#player-entry-panel {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* number of players*/
+#score-form {
+    display: flex;
+    align-items: center;
+}
+
+#score-form button {
+    margin-left: 2rem;
+}
+
+#score-form #player-number {
+    margin-left: 1rem;
+}
+
+/*enter player name*/
+
+.player-8 {
+    margin-top: 1rem;
+}
+
+.player-4, .player-5, .player-6, .player-7, .player-8 {
+    display: none;
+}
+
+/*player entry*/
+
+#player-name-left-box {
+    margin-top: 1rem;
+}
+#player-name-right-box {
+    margin-right: 10rem;
+}
+
+#player-name-right-box table {
+    width: 100%;
+}
+
+#form-entry th{
+    font-size: 1.2rem;
+    background-color: darkgray;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+#form-entry td {
+    text-align: center;
+    background-color: rgb(226, 224, 224);
+    border: 1px solid white;
+}
+
+
+/*matchups*/
+
+#matchups {
+    border-top: 0.5px solid lightgray;
+    margin-bottom: 6rem;
+}
+
+#matchup1, #matchup2, #matchup3, #matchup4 {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.counter {
+    height:2rem;
+    width:2rem;
+    padding-left: 1rem;
+}
+
+.vs {
+    margin:0 2rem;
+    font-weight: bold;
+}
+
+.submit-score, .result-message {
+    margin-left: 2rem;
+}
+
+.result-message {
+    position:relative
+}
+
+.winning-message, .draw, #matchup3, #matchup4 {
+    display: none;
+}
+
+#startMatchups {
+    margin: 2rem 0 0 1rem;
+}

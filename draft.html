@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Chaos Draft</title>
+    <link href="/Users/davidbrowne/Desktop/Practice coding/Git Project/resources/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div id="nav">
+            <h1 id="header">MTG Chaos Draft Sim</h1>
+            <ul>
+                <li class="hRules"><a href= "index.html">Home & Rules</a></li>
+                <li class="draftSet"><a href="draft.html">Draft Sets</a></li>
+                <li class="scoreC"><a href="scoreC.html">Score Counter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="text-hero-banner">
+        <p>In Chaos Draft, one exciting twist on the traditional format is drafting by set blocks—grouping booster packs by their original sets or themed blocks, such as Ravnica, Zendikar, or Innistrad. Instead of using completely random packs from across Magic’s history, players can draft from a curated selection within a block, preserving some synergy while still embracing the unpredictability of Chaos Draft. For example, including one pack each from Ravnica: City of Guilds, Guildpact, and Dissension offers a semi-cohesive draft environment filled with multicolor mechanics, while still giving players a taste of variety and surprise. This approach strikes a balance between chaos and cohesion, appealing to players who enjoy wild interactions but still want some mechanical familiarity.</p>
+    </section>
+
+    <section id="draft-sim">
+
+        <h2>Choose a block:</h2>
+        
+        <form>
+            <div class="form-group">
+                <label for="draft-block">Draft Block</label>
+                    <select name="draft-block" id="draft-block">
+                        <option value="">--Select a block--</option>
+                        <option value="Ixalan Block">Ixalan Block</option>
+                        <option value="Phyrexian Block">Phyrexian Block</option>
+                        <option value="Innistrad Block">Innistrad Block</option>
+                        <option value="Ravnica Block">Ravnica Block</option>
+                        <option value="Tarkir Block">Tarkir Block</option>
+                    </select>
+                    <button id="submit" type="button">Submit</button>
+            </div>            
+        </form>
+    </section>
+
+    <section id="results-table">
+        
+        <table id="ixalan-table" class="all-tables">
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Ixalan</td>
+                <td class="year">2017</td>
+                <td class="price">£7</td>
+                <td>Carnage Tyrant, Colossal Dreadmaw, Ancient Brontodon</td>
+            </tr>
+            <tr>
+                <td class="sets">Rivals of Ixalan</td>
+                <td class="year">2018</td>
+                <td class="price">£7</td>
+                <td>Bonehoard Dracosaur, Twilight Prophet, Huatli, Radiant Champion</td>
+
+            </tr>
+            <tr>
+                <td class="sets">Caverns of Ixalan</td>
+                <td class="year">2023</td>
+                <td class="price">£5</td>
+                <td>Ghalta, Stampede Tyrant, The Skullspore Nexus, Ojer Kaslem, Deepest Growth, Ojer Axonil</td>
+            </tr>
+        </table>
+
+        <table id="phyrexian-table" class="all-tables">
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Dominaria United</td>
+                <td class="year">2022</td>
+                <td class="price">£5</td>
+                <td>Sheoldred, the Apocalypse, Liliana of the Veil, Shivan Devastator</td>
+            </tr>
+            <tr>
+                <td class="sets">The Brother's War</td>
+                <td class="year">2022</td>
+                <td class="price">£4</td>
+                <td>Titus's Command, Wurm Coil Engine, Foundry Inspector, Recruitment Officer, Mox Amber, Portal to Phyrexia</td>
+
+            </tr>
+            <tr>
+                <td class="sets">Phyrexia: All Will Be One</td>
+                <td class="year">2023</td>
+                <td class="price">£6</td>
+                <td>Phyrexian Arena, White Sun’s Twilight, Elesh Norn, Mother of Machines, The Eternal Wanderer, Nissa, Ascended Animist</td>
+            </tr>
+            <tr>
+                <td class="sets">March of the Machine</td>
+                <td class="year">2023</td>
+                <td class="price">£6</td>
+                <td>Ragavan, Nimble Pilferer, Elesh Norn / The Argent Etchings, Atraxa, Praetors' Voice, Phyrexian Crusader (The List), Ketria Triome</td>
+            </tr>
+        </table>
+
+        <table id="innistrad-table" class="all-tables">
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Innistrad</td>
+                <td class="year">2011</td>
+                <td class="price">£20</td>
+                <td>Griselbrand, Snapcaster Mage, Drana, Liberator of Malakir</td>
+            </tr>
+            <tr>
+                <td class="sets">Midnight Hunt</td>
+                <td class="year">2021</td>
+                <td class="price">£4</td>
+                <td>Tovolar's Huntmaster, Arlinn, the Pack's Hope, The Meathook Massacre</td>
+
+            </tr>
+            <tr>
+                <td class="sets">Crimson Vow</td>
+                <td class="year">2021</td>
+                <td class="price">£4</td>
+                <td>Toxrill, the Corrosive, Cemetery Prowler, Hallowed Haunting, Edgar, Charmed Groom</td>
+            </tr>
+            </table>
+
+            <table id="ravnica-table" class="all-tables">
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Return to Ravnica</td>
+                <td class="year">2012</td>
+                <td class="price">£16</td>
+                <td>Utvara Hellkite, Sphere of Safety, Chromatic Lantern, Pack Rat, Supreme Verdict</td>
+            </tr>
+            <tr>
+                <td class="sets">Guilds of Ravnica</td>
+                <td class="year">2018</td>
+                <td class="price">£4</td>
+                <td>Sacred Foundry (foil), Steam Vents (foil), Beast Whisperer, Arclight Phoenix</td>
+            </tr>
+            <tr>
+                <td class="sets">Ravnica Allegiance</td>
+                <td class="year">2019</td>
+                <td class="price">£4</td>
+                <td>Wilderness Reclamation, Electrodominance, Mirror March, Incubation Druid, Bedevil</td>
+
+            </tr>
+            <tr>
+                <td class="sets">War of the Spark</td>
+                <td class="year">2019</td>
+                <td class="price">£4</td>
+                <td>Bolas’s Citadel, Spark Double, Finale of Devastation, Liliana, Dreadhorde General, Nicol Bolas, Dragon-God</td>
+            </tr>
+            </table>
+
+            <table id="tarkir-table" class="all-tables">
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Khans of Tarkir</td>
+                <td class="year">2014</td>
+                <td class="price">£6</td>
+                <td>Sarkhan, the Dragonspeaker, Fetch Lands (e.g., Polluted Delta), Siege Rhino, Anafenza, the Foremost</td>
+            </tr>
+            <tr>
+                <td class="sets">Fate Reforged</td>
+                <td class="year">2015</td>
+                <td class="price">£5</td>
+                <td>Ugin, the Spirit Dragon, Monastery Mentor, Soulfire Grand Master, Crux of Fate</td>
+
+            </tr>
+            <tr>
+                <td class="sets">Tarkir: Dragonstorm</td>
+                <td class="year">2025</td>
+                <td class="price">£5</td>
+                <td>Ugin, Eye of the Storms, Elspeth, Storm Slayer, Mox Jasper, Dracogenesis showcase variants</td>
+            </tr>
+        </table>
+
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
