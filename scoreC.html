@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Chaos Draft</title>
-    <link href="/Users/davidbrowne/Desktop/Practice coding/Git Project/resources/styles.css" rel="stylesheet" type="text/css">
+    <link href="resources/styles.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +24,7 @@
 <section id="player-entry-box">
     <h2 class="score-page-titles">Enter Players</h2>
     <div id="player-entry-panel">
-        <div id="player-name-left-box">
+        <div id= "player-entry-left">
             <form>
                 <div id="score-form">
                     <label for ="player-number">Number of Players</label>
@@ -36,171 +36,13 @@
                             <option value ="7">7</option>
                             <option value ="8">8</option>
                         </select>
-                        <button id="submit-player" type="button">Confirm</button>
                 </div>
             </form>
-
-            <div id="enter-player-name">
-            
-                <form class ="player-4 player-5 player-6 player-7 player-8">
-                <input type="text" name ="player-1" value = "Enter Name">
-                <button class="confirm-player" id="player-1-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-4 player-5 player-6 player-7 player-8">
-                <input type="text" name ="player-2" value = "Enter Name">
-                <button class="confirm-player" id="player-2-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-4 player-5 player-6 player-7 player-8">
-                <input type="text" name ="player-3" value = "Enter Name">
-                <button class="confirm-player" id="player-3-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-4 player-5 player-6 player-7 player-8">
-                <input type="text" name ="player-4" value = "Enter Name">
-                <button class="confirm-player" id="player-4-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-5 player-6 player-7 player-8">
-                <input type="text" name ="player-5" value = "Enter Name">
-                <button class="confirm-player" id="player-5-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-6 player-7 player-8">
-                <input type="text" name ="player-6" value = "Enter Name">
-                <button class="confirm-player" id="player-6-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-7 player-8">
-                <input type="text" name ="player-7" value = "Enter Name">
-                <button class="confirm-player" id="player-7-button" type="button">Confirm</button>
-                </form>
-
-                <form class ="player-8">
-                <input type="text" name ="player-8" value = "Enter Name">
-                <button class="confirm-player" id="player-8-button" type="button">Confirm</button>
-                </form>
-            </div>
-        </div>
-
-        <div id="player-name-right-box">
-            <table id="form-entry">  
-                <tr>
-                    <th>Player Name</th>  
-                    <th>Player Record (W-L)</th>  
-                </tr>
-                <tr>
-                    <td id="name-1"></td>
-                    <td id="score-1"></td>
-                </tr>
-                <tr>
-                    <td id="name-2"></td>
-                    <td id="score-2"></td>
-                </tr>
-                <tr>
-                    <td id="name-3"></td>
-                    <td id="score-3"></td>
-                </tr>
-                <tr>
-                    <td id="name-4"></td>
-                    <td id="score-4"></td>
-                </tr>
-                <tr>
-                    <td id="name-5"></td>
-                    <td id="score-5"></td>
-                </tr>
-                <tr>
-                    <td id="name-6"></td>
-                    <td id="score-6"></td>
-                </tr>
-                <tr>
-                    <td id="name-7"></td>
-                    <td id="score-7"></td>
-                </tr>
-                <tr>
-                    <td id="name-8"></td>
-                    <td id="score-8"></td>
-                </tr>
-            </table>
+            <div id="enter-player-name"></div>
         </div>
     </div>
  </section>
- 
- <section id="matchups">
-    <h2 class="score-page-titles">Match Up 1</h2>
 
-        <div id="matchup1">
-            <p class="player-matchup" id="p1"></p>
-            <input type="number" class="counter" id="p1Score" value="0" max="2" min="0">
-            <p>-</p>
-            <input type="number" class="counter" id="p2Score" value="0" max="2" min="0">
-            <p class="player-matchup" id="p2"></p>
-            <button class="submit-score" id="submitScore1">Submit</button>
-            <div class="result-message">
-                <p class="winning-message" id="winningMessage1">
-                    <span id="winPlayer1">Player</span> wins <span id="p1w1">X</span>-<span id="p2w1">X</span>
-                </p>
-                <p class="draw" id="drawMessage1">
-                    Draw <span id="p1d1">X</span>-<span id="p2d1">X</span>
-                </p>
-            </div>
-        </div>
-
-        <div id="matchup2">
-            <p class="player-matchup" id="p3"></p>
-            <input type="number" class="counter" id="p3Score" value="0" max="2" min="0">
-            <p>-</p>
-            <input type="number" class="counter" id="p4Score" value="0" max="2" min="0">
-            <p class="player-matchup" id="p4"></p>
-            <button class="submit-score" id="submitScore2">Submit</button>
-            <div class="result-message">
-                <p class="winning-message" id="winningMessage2">
-                    <span id="winPlayer2">Player</span> wins <span id="p3w2">X</span>-<span id="p4w2">X</span>
-                </p>
-                <p class="draw" id="drawMessage2">
-                    Draw <span id="p3d2">X</span>-<span id="p4d2">X</span>
-                </p>
-            </div>
-        </div>
-
-        <div id="matchup3">
-            <p class="player-matchup" id="p5"></p>
-            <input type="number" class="counter" id="p5Score" value="0" max="2" min="0">
-            <p>-</p>
-            <input type="number" class="counter" id="p6Score" value="0" max="2" min="0">
-            <p class="player-matchup" id="p6"></p>
-            <button class="submit-score" id="submitScore3">Submit</button>
-            <div class="result-message">
-                <p class="winning-message" id="winningMessage3">
-                    <span id="winPlayer3">Player</span> wins <span id="p5w3">X</span>-<span id="p6w3">X</span>
-                </p>
-                <p class="draw" id="drawMessage3">
-                    Draw <span id="p5d3">X</span>-<span id="p6d3">X</span>
-                </p>
-            </div>
-        </div>
-
-        <div id="matchup4">
-            <p class="player-matchup" id="p7" ></p>
-            <input type="number" class="counter" id="p7Score" value="0" max="2" min="0">
-            <p>-</p>
-            <input type="number" class="counter" id="p8Score" value="0" max="2" min="0">
-            <p class="player-matchup" id="p8"></p>
-            <button class="submit-score" id="submitScore4">Submit</button>
-            <div class="result-message">
-                <p class="winning-message" id="winningMessage4">
-                    <span id="winPlayer4">Player</span> wins <span id="p7w4">X</span>-<span id="p8w4">X</span>
-                </p>
-                <p class="draw" id="drawMessage4">
-                    Draw <span id="p7d4">X</span>-<span id="p8d4">X</span>
-                </p>
-            </div>
-        </div>
-
-        <button id="startMatchups">Start Matchups</button>
- </section>
-
-   <script src= "enterPlayer.js"></script>
+   <script type="module" src= "main.js"></script>
 </body>
 </html>
