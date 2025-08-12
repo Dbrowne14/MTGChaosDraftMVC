@@ -36,11 +36,20 @@ let updateArrayLength = (parent, len, array) => {
 
 /*-------------Table functions-----*/
 
-const removeInputs = (item, containerId) => {
-    const container = document.getElementById(containerId)
-    const removeItem = container.querySelector(item);
-    if(removeItem) {
-        removeItem.remove();
+const removeInputs = (item, containerId, oneOrAll) => {
+    
+    const container = document.getElementById(containerId);
+
+    if(oneOrAll.toLowerCase() === "one") {
+        const removeItem = container.querySelector(item);
+        if(removeItem) {removeItem.remove();}
+    }
+    else if (oneOrAll.toLowerCase() === "all") {
+        const removeItems = container.querySelectorAll(item);
+        removeItems.forEach(element => element.remove())
+    }
+    else {
+        throw new Error('you must enter either "single" representing a single removal or "all" to remove all items')
     }
 }
 
@@ -67,5 +76,48 @@ let createTableData = (data, referenceTable) => {
     }
 }
 
-export { createButton, createInput, updateArrayLength, removeInputs, createTableHeader, createTableData };
+/*-------------Matchups-----*/
+
+let addHeader = (matchupNumber, matchupsId) => {
+    const createHeader = document.createElement("h2");
+    createHeader.textContent = `Matchup ${matchupNumber}`;
+    matchupsId.appendChild(createHeader);
+};
+
+const pairKey = pair => {
+    return pair
+    .slice() // create pair copy
+    .sort() // sort
+    .join("|") // add a separtor for unique string
+}
+
+const generateAllPairs = (arr) => {
+  const pairs = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      pairs.push([arr[i], arr[j]]);
+    }
+  }
+  console.log(pairs);
+  return pairs;
+};
+
+let shuffledArray = (arr) => {
+
+    if (!Array.isArray(arr)) {
+        new Error("Expected array but got:", arr);
+        return [];
+    }
+
+    const arrayShuffled = [...arr]
+
+    for (let i = arrayShuffled.length-1; i > 0; i--) {
+        let j = Math.floor(Math.random()*(i+1));
+        [arrayShuffled[i], arrayShuffled[j]] = [arrayShuffled[j], arrayShuffled[i]]
+    }
+    console.log(arrayShuffled)
+    return arrayShuffled;
+}
+
+export { createButton, createInput, updateArrayLength, removeInputs, createTableHeader, createTableData, addHeader, pairKey, generateAllPairs, shuffledArray };
 
